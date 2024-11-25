@@ -25,6 +25,7 @@
 ## Description
 
 The Movie Manager API is a service that allows you to manage movies, providing functionalities to list, create, update, and delete movies. It also includes authentication and authorization to protect certain operations.
+It has automatic synchronization of the movie list through a cronjob that runs every 30 minutes.
 
 ## Installation
 
