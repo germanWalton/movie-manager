@@ -22,7 +22,10 @@ export class AuthService {
   async generateToken(payload: TokenPayload): Promise<string> {
     return this.jwtService.sign(payload);
   }
-
+// Nota: Se optó por establecer el rol directamente en el registro para simplificar el flujo,
+// dado que el alcance del proyecto no requiere una asignación de roles más compleja.
+// En un entorno escalable, sería preferible asignar un rol predeterminado (ej. "user")
+// y permitir la modificación de roles a través de un endpoint restringido a administradores
   async signUp(body: SignUpBodyDto): Promise<SignUpResponseDto> {
     try {
       const { email, password } = body;
